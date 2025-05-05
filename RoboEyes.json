@@ -1,0 +1,2562 @@
+[
+    {
+        "id": "63d8d719235423e1",
+        "type": "tab",
+        "label": "RoboEye",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a48eae499cb4dbe7",
+        "type": "ui_switch",
+        "z": "63d8d719235423e1",
+        "name": "Sleep-Modus",
+        "label": "Sleep",
+        "tooltip": "",
+        "group": "8cdd80f37957781d",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "roboeyes/sleep",
+        "topicType": "str",
+        "onvalue": "1",
+        "onvalueType": "num",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "0",
+        "offvalueType": "num",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 340,
+        "y": 100,
+        "wires": [
+            [
+                "5aa88ad26d9db664"
+            ]
+        ]
+    },
+    {
+        "id": "5aa88ad26d9db664",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "Sleep ON/OFF",
+        "topic": "",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "cf351bfc4055d616",
+        "x": 540,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "750d6047a23987f6",
+        "type": "ui_dropdown",
+        "z": "63d8d719235423e1",
+        "name": "Animation Auswahl",
+        "label": "Animation:",
+        "tooltip": "",
+        "place": "",
+        "group": "8cdd80f37957781d",
+        "order": 12,
+        "width": 7,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Animation 0",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "Animation 1",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "Animation 2",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "Animation 3",
+                "value": 3,
+                "type": "num"
+            },
+            {
+                "label": "Animation 4",
+                "value": 4,
+                "type": "num"
+            },
+            {
+                "label": "Animation 5",
+                "value": 5,
+                "type": "num"
+            },
+            {
+                "label": "Animation 6",
+                "value": 6,
+                "type": "num"
+            },
+            {
+                "label": "Animation 7",
+                "value": 7,
+                "type": "num"
+            },
+            {
+                "label": "Animation 8",
+                "value": 8,
+                "type": "num"
+            },
+            {
+                "label": "Animation 9",
+                "value": 9,
+                "type": "num"
+            },
+            {
+                "label": "Animation 10",
+                "value": 10,
+                "type": "num"
+            },
+            {
+                "label": "Animation 11",
+                "value": 11,
+                "type": "num"
+            },
+            {
+                "label": "Animation 12",
+                "value": 12,
+                "type": "num"
+            },
+            {
+                "label": "Animation 13",
+                "value": 13,
+                "type": "num"
+            },
+            {
+                "label": "Animation 14",
+                "value": 14,
+                "type": "num"
+            },
+            {
+                "label": "Animation 15",
+                "value": 15,
+                "type": "num"
+            },
+            {
+                "label": "Sleep",
+                "value": 16,
+                "type": "num"
+            },
+            {
+                "label": "-",
+                "value": "OFF",
+                "type": "str"
+            }
+        ],
+        "payload": "value",
+        "topic": "roboeyes/animation",
+        "topicType": "str",
+        "className": "",
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "530b93c849924911"
+            ]
+        ]
+    },
+    {
+        "id": "530b93c849924911",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "Starte Animation MQTT",
+        "topic": "roboeyes/animation",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "cf351bfc4055d616",
+        "x": 570,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "67e44b341a117c64",
+        "type": "ui_dropdown",
+        "z": "63d8d719235423e1",
+        "name": "Mood Auswahl",
+        "label": "Mood Auswahl:",
+        "tooltip": "",
+        "place": "",
+        "group": "8cdd80f37957781d",
+        "order": 13,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "DEFAULT",
+                "value": 0,
+                "type": "num"
+            },
+            {
+                "label": "TIRED",
+                "value": 1,
+                "type": "num"
+            },
+            {
+                "label": "ANGRY",
+                "value": 2,
+                "type": "num"
+            },
+            {
+                "label": "HAPPY",
+                "value": 3,
+                "type": "num"
+            }
+        ],
+        "payload": "value",
+        "topic": "roboeyes/mood",
+        "topicType": "str",
+        "className": "",
+        "x": 340,
+        "y": 300,
+        "wires": [
+            [
+                "f7fd353a57c4408e"
+            ]
+        ]
+    },
+    {
+        "id": "f7fd353a57c4408e",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "mood",
+        "topic": "roboeyes/mood",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "cf351bfc4055d616",
+        "x": 510,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "0faa9faaac056c35",
+        "type": "ui_slider",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "label": "Time",
+        "tooltip": "",
+        "group": "8cdd80f37957781d",
+        "order": 7,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 310,
+        "y": 440,
+        "wires": [
+            [
+                "381d05b467dc54f4"
+            ]
+        ]
+    },
+    {
+        "id": "b604c5a198a4984f",
+        "type": "ui_slider",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "label": "Random",
+        "tooltip": "",
+        "group": "8cdd80f37957781d",
+        "order": 8,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 320,
+        "y": 480,
+        "wires": [
+            [
+                "4baa9f9d041ce0e5"
+            ]
+        ]
+    },
+    {
+        "id": "3dc939e77f04cea4",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Idel ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 320,
+        "y": 400,
+        "wires": [
+            [
+                "4bb5781d55a5f6a0"
+            ]
+        ]
+    },
+    {
+        "id": "4bb5781d55a5f6a0",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 3",
+        "func": "let f1 = flow.get(\"fader1\") || 0;\nlet f2 = flow.get(\"fader2\") || 0;\n\nmsg.payload = `ON,${f1},${f2}`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 400,
+        "wires": [
+            [
+                "0d79281ab6acbb86"
+            ]
+        ]
+    },
+    {
+        "id": "381d05b467dc54f4",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 4",
+        "func": "flow.set(\"fader1\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4baa9f9d041ce0e5",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 5",
+        "func": "flow.set(\"fader2\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0d79281ab6acbb86",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "roboeyes/IdleMode",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 550,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "0b65c2a4c7c00a4a",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Idel OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "OFF,0,0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "0d79281ab6acbb86"
+            ]
+        ]
+    },
+    {
+        "id": "6707cc07edef8b5b",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 10,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "random Ani. OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "roboeyes/random",
+        "topicType": "str",
+        "x": 350,
+        "y": 540,
+        "wires": [
+            [
+                "335e6b481a2e6512",
+                "6d6733c9fc687a08"
+            ]
+        ]
+    },
+    {
+        "id": "733a6f43fe6d5255",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 9,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "random Ani. ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "roboeyes/random",
+        "topicType": "str",
+        "x": 340,
+        "y": 580,
+        "wires": [
+            [
+                "335e6b481a2e6512"
+            ]
+        ]
+    },
+    {
+        "id": "335e6b481a2e6512",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 510,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "f0f8db40c8d86f57",
+        "type": "ui_text_input",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "group": "8cdd80f37957781d",
+        "order": 3,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 1000,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "597a09174d19d301",
+        "type": "mqtt in",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "roboeyes/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a66d4c6b.57ddc",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 820,
+        "y": 620,
+        "wires": [
+            [
+                "f0f8db40c8d86f57",
+                "1463bfea183722fc",
+                "c7e9724d96e247f0",
+                "bfe10bd788f4bb2f",
+                "635a4f7c602af55d",
+                "b594aff63ef2b732"
+            ]
+        ]
+    },
+    {
+        "id": "c062620408762f4a",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 28,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Blink L",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1,0",
+        "payloadType": "str",
+        "topic": "roboeyes/blink",
+        "topicType": "str",
+        "x": 790,
+        "y": 360,
+        "wires": [
+            [
+                "5def9ec6c497c2af"
+            ]
+        ]
+    },
+    {
+        "id": "fdb5145a4ce135ee",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 20,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "RandomBlink OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "roboeyes/random_blink",
+        "topicType": "str",
+        "x": 830,
+        "y": 80,
+        "wires": [
+            [
+                "144b393a52fe45e9"
+            ]
+        ]
+    },
+    {
+        "id": "a531cde09db09df0",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 19,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "RandomBlink ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "roboeyes/random_blink",
+        "topicType": "str",
+        "x": 830,
+        "y": 120,
+        "wires": [
+            [
+                "144b393a52fe45e9"
+            ]
+        ]
+    },
+    {
+        "id": "144b393a52fe45e9",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 990,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "953ebd4a8ab43f63",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 33,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Close",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1,1",
+        "payloadType": "str",
+        "topic": "roboeyes/close",
+        "topicType": "str",
+        "x": 790,
+        "y": 500,
+        "wires": [
+            [
+                "82ef2cce5ae51241"
+            ]
+        ]
+    },
+    {
+        "id": "0d574290cee27e59",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 32,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Open",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1,1",
+        "payloadType": "str",
+        "topic": "roboeyes/open",
+        "topicType": "str",
+        "x": 790,
+        "y": 540,
+        "wires": [
+            [
+                "82ef2cce5ae51241"
+            ]
+        ]
+    },
+    {
+        "id": "82ef2cce5ae51241",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 990,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "27cdc09cabacd60e",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 29,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Blink",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1,1",
+        "payloadType": "str",
+        "topic": "roboeyes/blink",
+        "topicType": "str",
+        "x": 790,
+        "y": 400,
+        "wires": [
+            [
+                "5def9ec6c497c2af"
+            ]
+        ]
+    },
+    {
+        "id": "815acf1b8a9c5651",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 30,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Blink R",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0,1",
+        "payloadType": "str",
+        "topic": "roboeyes/blink",
+        "topicType": "str",
+        "x": 800,
+        "y": 440,
+        "wires": [
+            [
+                "5def9ec6c497c2af"
+            ]
+        ]
+    },
+    {
+        "id": "5def9ec6c497c2af",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 990,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "ba033c1e630378b0",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 15,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "AutoBlink OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "OFF,0,0",
+        "payloadType": "str",
+        "topic": "roboeyes/autoblinker",
+        "topicType": "str",
+        "x": 820,
+        "y": 180,
+        "wires": [
+            [
+                "dcfe7c65338d77d8"
+            ]
+        ]
+    },
+    {
+        "id": "ef614a9f26fd6a46",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 14,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "AutoBlink ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "ON,1,2",
+        "payloadType": "str",
+        "topic": "roboeyes/autoblinker",
+        "topicType": "str",
+        "x": 820,
+        "y": 220,
+        "wires": [
+            [
+                "ab7a8d3cbd08d142"
+            ]
+        ]
+    },
+    {
+        "id": "dcfe7c65338d77d8",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 990,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8f9346724a77aed6",
+        "type": "ui_slider",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "label": "Time Blink",
+        "tooltip": "",
+        "group": "8cdd80f37957781d",
+        "order": 17,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 810,
+        "y": 260,
+        "wires": [
+            [
+                "8bec63bc9a75b83e"
+            ]
+        ]
+    },
+    {
+        "id": "76d6aef9af9406aa",
+        "type": "ui_slider",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "label": "Random Blink",
+        "tooltip": "",
+        "group": "8cdd80f37957781d",
+        "order": 18,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 820,
+        "y": 300,
+        "wires": [
+            [
+                "861907fb314f2bb1"
+            ]
+        ]
+    },
+    {
+        "id": "8bec63bc9a75b83e",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 6",
+        "func": "flow.set(\"fader3\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "861907fb314f2bb1",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 7",
+        "func": "flow.set(\"fader4\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab7a8d3cbd08d142",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 8",
+        "func": "let f1 = flow.get(\"fader3\") || 0;\nlet f2 = flow.get(\"fader4\") || 0;\n\nmsg.payload = `ON,${f1},${f2}`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 220,
+        "wires": [
+            [
+                "dcfe7c65338d77d8"
+            ]
+        ]
+    },
+    {
+        "id": "a0522feae8186f34",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 23,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Curiosity OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "roboeyes/curiosity",
+        "topicType": "str",
+        "x": 340,
+        "y": 660,
+        "wires": [
+            [
+                "0eb59b295d356f42"
+            ]
+        ]
+    },
+    {
+        "id": "0cb91b1067882709",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 22,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Curiosity ON",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "roboeyes/curiosity",
+        "topicType": "str",
+        "x": 330,
+        "y": 700,
+        "wires": [
+            [
+                "0eb59b295d356f42"
+            ]
+        ]
+    },
+    {
+        "id": "0eb59b295d356f42",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 510,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "14f1342e9def9672",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 25,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Confused",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "roboeyes/confused",
+        "topicType": "str",
+        "x": 320,
+        "y": 780,
+        "wires": [
+            [
+                "ec5f5c88c4c4d43b"
+            ]
+        ]
+    },
+    {
+        "id": "2c5041b0bfdd4ca1",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 26,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Laugh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "roboeyes/laugh",
+        "topicType": "str",
+        "x": 310,
+        "y": 820,
+        "wires": [
+            [
+                "ec5f5c88c4c4d43b"
+            ]
+        ]
+    },
+    {
+        "id": "ec5f5c88c4c4d43b",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 510,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "9357a72d4f27492f",
+        "type": "ui_led2",
+        "z": "63d8d719235423e1",
+        "order": 6,
+        "group": "8cdd80f37957781d",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "property": "payload",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "red",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "green",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "IdleMode",
+        "x": 1060,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "1463bfea183722fc",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "LED IdleMode",
+        "func": "// Nur wenn die Nachricht \"IdleMode\" betrifft\nif (msg.payload.includes(\"IdleMode changed to\") || msg.payload.includes(\"Sleep mode:\"))  {\n    if (msg.payload.includes(\"ON\")) {\n        msg.payload = \"green\"; // LED grün\n        return msg;\n    } else if (msg.payload.includes(\"OFF\")) {\n        msg.payload = \"red\"; // LED rot\n        return msg;\n    }\n}\n\n// alle anderen Status ignorieren\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 680,
+        "wires": [
+            [
+                "9357a72d4f27492f"
+            ]
+        ]
+    },
+    {
+        "id": "c7e9724d96e247f0",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "LED AutoBlink",
+        "func": "// Nur wenn die Nachricht \"AutoBlinker\" betrifft\nif (msg.payload.includes(\"AutoBlinker changed to:\")) {\n    if (msg.payload.includes(\"ON\")) {\n        msg.payload = \"green\"; // LED grün\n        return msg;\n    } else if (msg.payload.includes(\"OFF\")) {\n        msg.payload = \"red\"; // LED rot\n        return msg;\n    }\n}\nif (msg.payload.includes(\"Sleep Modus\")) {\n    if (msg.payload.includes(\"ON\")) {\n        msg.payload = \"red\"; // LED grün\n        return msg;\n    } //else if (msg.payload.includes(\"OFF\")) {\n        //msg.payload = \"green\"; // LED rot\n        //return msg;\n    //}\n}\n\n// alle anderen Status ignorieren\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 740,
+        "wires": [
+            [
+                "0c789ee46b359103"
+            ]
+        ]
+    },
+    {
+        "id": "0c789ee46b359103",
+        "type": "ui_led2",
+        "z": "63d8d719235423e1",
+        "order": 16,
+        "group": "8cdd80f37957781d",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "property": "payload",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "red",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "green",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "AutoBlinker",
+        "x": 1070,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "bfe10bd788f4bb2f",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "LED Random Ani.",
+        "func": "// Nur wenn die Nachricht \"Random Modus\" betrifft\nif (msg.payload.includes(\"Random mode:\")) {\n    if (msg.payload.includes(\"ON\")) {\n        msg.payload = \"green\"; // LED grün\n        return msg;\n    } else if (msg.payload.includes(\"OFF\")) {\n        msg.payload = \"red\"; // LED rot\n        return msg;\n    }\n}\nif (msg.payload.includes(\"Manual animation:\")) {\n    msg.payload = \"red\"; // LED rot\n    return msg;\n}\nif (msg.payload.includes(\"Sleep mode: ON\")) {\n    msg.payload = \"red\"; // LED rot\n    return msg;\n}\n\n// alle anderen Status ignorieren\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 800,
+        "wires": [
+            [
+                "2097cf2267325c9b"
+            ]
+        ]
+    },
+    {
+        "id": "2097cf2267325c9b",
+        "type": "ui_led2",
+        "z": "63d8d719235423e1",
+        "order": 11,
+        "group": "8cdd80f37957781d",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "property": "payload",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "red",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "green",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Random Modus",
+        "x": 1100,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "0f24636c5c934c95",
+        "type": "ui_led2",
+        "z": "63d8d719235423e1",
+        "order": 24,
+        "group": "8cdd80f37957781d",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "property": "payload",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "red",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "green",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Curiosity",
+        "x": 1080,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "6ad27b1010408fff",
+        "type": "ui_led2",
+        "z": "63d8d719235423e1",
+        "order": 21,
+        "group": "8cdd80f37957781d",
+        "width": 1,
+        "height": 1,
+        "label": "",
+        "property": "payload",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "red",
+                "valueType": "str"
+            },
+            {
+                "color": "#008000",
+                "value": "green",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Random Blink",
+        "x": 1100,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "635a4f7c602af55d",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "LED Curiosity",
+        "func": "// Nur wenn die Nachricht \"Curiosity Modus\" betrifft\nif (msg.payload.includes(\"Curiosity\")) {\n    if (msg.payload.includes(\"ON\")) {\n        msg.payload = \"green\"; // LED grün\n        return msg;\n    } else if (msg.payload.includes(\"OFF\")) {\n        msg.payload = \"red\"; // LED rot\n        return msg;\n    }\n}\n\n// alle anderen Status ignorieren\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 860,
+        "wires": [
+            [
+                "0f24636c5c934c95"
+            ]
+        ]
+    },
+    {
+        "id": "b594aff63ef2b732",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "LED Random Blink Modus",
+        "func": "// Nur wenn die Nachricht \"Random Blink Modus\" betrifft\nif (msg.payload.includes(\"Random blink mode: \")) {\n    if (msg.payload.includes(\"ON\")) {\n        msg.payload = \"green\"; // LED grün\n        return msg;\n    } else if (msg.payload.includes(\"OFF\")) {\n        msg.payload = \"red\"; // LED rot\n        return msg;\n    }\n}\n\n// alle anderen Status ignorieren\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 920,
+        "wires": [
+            [
+                "6ad27b1010408fff"
+            ]
+        ]
+    },
+    {
+        "id": "4e3fc9b8fc2659fa",
+        "type": "mqtt in",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "roboeyes/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a66d4c6b.57ddc",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "71bb8f20601f6548",
+                "4b2a03f2d37dd3cf",
+                "e8b3a3f437e2d26a"
+            ]
+        ]
+    },
+    {
+        "id": "71bb8f20601f6548",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "Mood",
+        "func": "\nif (msg.payload.includes(\"Sleep mode:\")) {\n    if (msg.payload.includes(\"ON\")) {\n        msg.payload = \"1\"; // TIRED\n        return msg;\n    } else if (msg.payload.includes(\"OFF\")) {\n        msg.payload = \"0\"; // DEFAULT\n        return msg;\n    }\n}\n\nif (msg.payload.includes(\"Mode:\")) {\n    if (msg.payload.includes(\"TIRED\")) {\n        msg.payload = \"1\"; // TIRED\n        return msg;\n    } else if (msg.payload.includes(\"DEFAULT\")) {\n        msg.payload = \"0\"; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\"ANGRY\")) {\n        msg.payload = \"2\"; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\"HAPPY\")) {\n        msg.payload = \"3\"; // DEFAULT\n        return msg;\n    } \n}\n\n// alle anderen Status ignorieren\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "67e44b341a117c64"
+            ]
+        ]
+    },
+    {
+        "id": "4b2a03f2d37dd3cf",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "Animation",
+        "func": "\nif (msg.payload.includes(\"Animation:\")) {\n    if (msg.payload.includes(\" 0 |\")) {\n        msg.payload = 0; \n        return msg;\n    } else if (msg.payload.includes(\" 1 |\")) {\n        msg.payload = 1; \n        return msg;\n    } else if (msg.payload.includes( \" 2 |\")) {\n        msg.payload = 2; \n        return msg;\n    } else if (msg.payload.includes(\" 3 |\")) {\n        msg.payload = 3; \n        return msg;\n    } else if (msg.payload.includes(\" 4 |\")) {\n        msg.payload = 4; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\" 5 |\")) {\n        msg.payload = 5; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\" 6 |\")) {\n        msg.payload = 6; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\" 7 |\")) {\n        msg.payload = 7; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\" 8 |\")) {\n        msg.payload = 8; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\" 9 |\")) {\n        msg.payload = 9; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\" 10 |\")) {\n        msg.payload = 10; // DEFAULT\n        return msg; \n    } else if (msg.payload.includes(\" 11 |\")) {\n        msg.payload = 11; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\" 12 |\")) {\n        msg.payload = 12; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\" 13 |\")) {\n        msg.payload = 13; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\" 14 |\")) {\n        msg.payload = 14; // DEFAULT\n        return msg;\n    } else if (msg.payload.includes(\" 15 |\")) {\n        msg.payload = 15; // DEFAULT\n        return msg;\n    }\n}\nif (msg.payload.includes(\"Sleep mode:\")) {\n    if (msg.payload.includes(\"ON\")) {\n        msg.payload = 16;\n        return msg;\n    } else if (msg.payload.includes(\"OFF\")) {\n        msg.payload = 17;\n        return msg;\n    }\n\n}   \n\n\n// alle anderen Status ignorieren\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "750d6047a23987f6"
+            ]
+        ]
+    },
+    {
+        "id": "e8b3a3f437e2d26a",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 9",
+        "func": "if (msg.payload.includes(\"16\")) {\n    msg.payload = \"1\"; // DEFAULT\n    return msg;\n}\n\n// alle anderen Status ignorieren\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 60,
+        "wires": [
+            [
+                "a48eae499cb4dbe7"
+            ]
+        ]
+    },
+    {
+        "id": "6d6733c9fc687a08",
+        "type": "change",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "17",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 540,
+        "wires": [
+            [
+                "750d6047a23987f6"
+            ]
+        ]
+    },
+    {
+        "id": "01bcd66dca0d284e",
+        "type": "ui_slider",
+        "z": "63d8d719235423e1",
+        "name": "Widet left",
+        "label": "L",
+        "tooltip": "",
+        "group": "12e900bdc52c63c1",
+        "order": 3,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "5",
+        "max": "70",
+        "step": 1,
+        "className": "",
+        "x": 340,
+        "y": 1260,
+        "wires": [
+            [
+                "9897f923e505e3a9"
+            ]
+        ]
+    },
+    {
+        "id": "4201f540310723a8",
+        "type": "ui_slider",
+        "z": "63d8d719235423e1",
+        "name": "Widet right",
+        "label": "R",
+        "tooltip": "",
+        "group": "12e900bdc52c63c1",
+        "order": 4,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "5",
+        "max": "70",
+        "step": 1,
+        "className": "",
+        "x": 350,
+        "y": 1300,
+        "wires": [
+            [
+                "054f762a092fb136"
+            ]
+        ]
+    },
+    {
+        "id": "ee5ac23b986ab391",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "roboeyes/width",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 740,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "8842a526fdcee159",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "roboeyes/width",
+        "func": "let f1 = flow.get(\"width1\") || 0;\nlet f2 = flow.get(\"width2\") || 0;\n\nmsg.payload = `${f1},${f2}`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1220,
+        "wires": [
+            [
+                "ee5ac23b986ab391"
+            ]
+        ]
+    },
+    {
+        "id": "9897f923e505e3a9",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 11",
+        "func": "flow.set(\"width1\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "054f762a092fb136",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 12",
+        "func": "flow.set(\"width2\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1d709a9a0b9429a",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "12e900bdc52c63c1",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Eye wide",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 340,
+        "y": 1220,
+        "wires": [
+            [
+                "8842a526fdcee159"
+            ]
+        ]
+    },
+    {
+        "id": "eb6741d179b7cc99",
+        "type": "ui_slider",
+        "z": "63d8d719235423e1",
+        "name": "Height left",
+        "label": "L",
+        "tooltip": "",
+        "group": "12e900bdc52c63c1",
+        "order": 7,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "5",
+        "max": "40",
+        "step": 1,
+        "className": "",
+        "x": 350,
+        "y": 1440,
+        "wires": [
+            [
+                "4e79af747c91b015"
+            ]
+        ]
+    },
+    {
+        "id": "09ec46805cdaefa1",
+        "type": "ui_slider",
+        "z": "63d8d719235423e1",
+        "name": "Height right",
+        "label": "R",
+        "tooltip": "",
+        "group": "12e900bdc52c63c1",
+        "order": 8,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "5",
+        "max": "40",
+        "step": 1,
+        "className": "",
+        "x": 350,
+        "y": 1480,
+        "wires": [
+            [
+                "d8960ec3345ca0e5"
+            ]
+        ]
+    },
+    {
+        "id": "6ad9b92a7dc03ed5",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "roboeyes/height",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 740,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "bf7dee3655078e1d",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "roboeyes/height",
+        "func": "let f1 = flow.get(\"height1\") || 0;\nlet f2 = flow.get(\"height2\") || 0;\n\nmsg.payload = `${f1},${f2}`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1400,
+        "wires": [
+            [
+                "6ad9b92a7dc03ed5"
+            ]
+        ]
+    },
+    {
+        "id": "4e79af747c91b015",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 10",
+        "func": "flow.set(\"height1\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d8960ec3345ca0e5",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 11",
+        "func": "flow.set(\"height2\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4a37f435276e93b8",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "12e900bdc52c63c1",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Eye height",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 350,
+        "y": 1400,
+        "wires": [
+            [
+                "bf7dee3655078e1d"
+            ]
+        ]
+    },
+    {
+        "id": "7af49b3cdf5bf495",
+        "type": "ui_slider",
+        "z": "63d8d719235423e1",
+        "name": "radius left",
+        "label": "L",
+        "tooltip": "",
+        "group": "12e900bdc52c63c1",
+        "order": 11,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "20",
+        "step": 1,
+        "className": "",
+        "x": 340,
+        "y": 1600,
+        "wires": [
+            [
+                "be3c738df8864b06"
+            ]
+        ]
+    },
+    {
+        "id": "745b753225e8aa4c",
+        "type": "ui_slider",
+        "z": "63d8d719235423e1",
+        "name": "radius right",
+        "label": "R",
+        "tooltip": "",
+        "group": "12e900bdc52c63c1",
+        "order": 12,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "20",
+        "step": 1,
+        "className": "",
+        "x": 350,
+        "y": 1640,
+        "wires": [
+            [
+                "497800e2b6c33464"
+            ]
+        ]
+    },
+    {
+        "id": "3e2df0029919690e",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "roboeyes/borderradius",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 760,
+        "y": 1560,
+        "wires": []
+    },
+    {
+        "id": "ad0e749355a1cd06",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "borderradius",
+        "func": "let f1 = flow.get(\"radius1\") || 0;\nlet f2 = flow.get(\"radius2\") || 0;\n\nmsg.payload = `${f1},${f2}`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1560,
+        "wires": [
+            [
+                "3e2df0029919690e"
+            ]
+        ]
+    },
+    {
+        "id": "be3c738df8864b06",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 13",
+        "func": "flow.set(\"radius1\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "497800e2b6c33464",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 14",
+        "func": "flow.set(\"radius2\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "55ee5c33550a4f21",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "12e900bdc52c63c1",
+        "order": 9,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Eye radius",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 350,
+        "y": 1560,
+        "wires": [
+            [
+                "ad0e749355a1cd06"
+            ]
+        ]
+    },
+    {
+        "id": "5c9eac731bb48819",
+        "type": "ui_slider",
+        "z": "63d8d719235423e1",
+        "name": "space",
+        "label": "",
+        "tooltip": "",
+        "group": "12e900bdc52c63c1",
+        "order": 15,
+        "width": 7,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-8",
+        "max": "40",
+        "step": 1,
+        "className": "",
+        "x": 330,
+        "y": 1760,
+        "wires": [
+            [
+                "b14193279acdc07e"
+            ]
+        ]
+    },
+    {
+        "id": "2f25ca4fc6270de1",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "roboeyes/spacebetween",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 770,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "1372ae2e0f2ba86e",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "spacebetween",
+        "func": "let f1 = flow.get(\"space\") || 0;\n\n\nmsg.payload = `${f1}`;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 1720,
+        "wires": [
+            [
+                "2f25ca4fc6270de1"
+            ]
+        ]
+    },
+    {
+        "id": "b14193279acdc07e",
+        "type": "function",
+        "z": "63d8d719235423e1",
+        "name": "function 15",
+        "func": "flow.set(\"space\", msg.payload);\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "502139c3fd5b34d8",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "12e900bdc52c63c1",
+        "order": 13,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Eye space",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 350,
+        "y": 1720,
+        "wires": [
+            [
+                "1372ae2e0f2ba86e"
+            ]
+        ]
+    },
+    {
+        "id": "b7a3f752294de80a",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 35,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "NW",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "NW",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 310,
+        "y": 940,
+        "wires": [
+            [
+                "58e454752601f998"
+            ]
+        ]
+    },
+    {
+        "id": "1cb4f428a04a5ade",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 36,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "N",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "N",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 450,
+        "y": 940,
+        "wires": [
+            [
+                "58e454752601f998"
+            ]
+        ]
+    },
+    {
+        "id": "1eacea73feb5cdec",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 37,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "NE",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "NE",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 590,
+        "y": 940,
+        "wires": [
+            [
+                "58e454752601f998"
+            ]
+        ]
+    },
+    {
+        "id": "c127898c94384afc",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 39,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "W",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "W",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 310,
+        "y": 1000,
+        "wires": [
+            [
+                "58e454752601f998"
+            ]
+        ]
+    },
+    {
+        "id": "b1925edba8bc4595",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 40,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "DEFAULT",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "DEFAULT",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 460,
+        "y": 1000,
+        "wires": [
+            [
+                "58e454752601f998"
+            ]
+        ]
+    },
+    {
+        "id": "87380227a425db6e",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 41,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "E",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "E",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 590,
+        "y": 1000,
+        "wires": [
+            [
+                "58e454752601f998"
+            ]
+        ]
+    },
+    {
+        "id": "4b67d200517df489",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 43,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "SW",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "SW",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 310,
+        "y": 1060,
+        "wires": [
+            [
+                "58e454752601f998"
+            ]
+        ]
+    },
+    {
+        "id": "4b76d8d7f4bc7f10",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 44,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "S",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "S",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 450,
+        "y": 1060,
+        "wires": [
+            [
+                "58e454752601f998"
+            ]
+        ]
+    },
+    {
+        "id": "3a23095090f3a16f",
+        "type": "ui_button",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "group": "8cdd80f37957781d",
+        "order": 45,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "SE",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "SE",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 590,
+        "y": 1060,
+        "wires": [
+            [
+                "58e454752601f998"
+            ]
+        ]
+    },
+    {
+        "id": "58e454752601f998",
+        "type": "mqtt out",
+        "z": "63d8d719235423e1",
+        "name": "",
+        "topic": "roboeyes/position",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a66d4c6b.57ddc",
+        "x": 770,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "989042588284738f",
+        "type": "ui_spacer",
+        "z": "63d8d719235423e1",
+        "name": "spacer",
+        "group": "8cdd80f37957781d",
+        "order": 1,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "05a108814e9ae77b",
+        "type": "ui_spacer",
+        "z": "63d8d719235423e1",
+        "name": "spacer",
+        "group": "8cdd80f37957781d",
+        "order": 27,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "3c72dbbfed5d609f",
+        "type": "ui_spacer",
+        "z": "63d8d719235423e1",
+        "name": "spacer",
+        "group": "8cdd80f37957781d",
+        "order": 31,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "e6c6bb0b8850cfcc",
+        "type": "ui_spacer",
+        "z": "63d8d719235423e1",
+        "name": "spacer",
+        "group": "8cdd80f37957781d",
+        "order": 34,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b1e4c996151600ef",
+        "type": "ui_spacer",
+        "z": "63d8d719235423e1",
+        "name": "spacer",
+        "group": "8cdd80f37957781d",
+        "order": 38,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "5a5714b82a2633dd",
+        "type": "ui_spacer",
+        "z": "63d8d719235423e1",
+        "name": "spacer",
+        "group": "8cdd80f37957781d",
+        "order": 42,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "81b7815341ca5af1",
+        "type": "ui_spacer",
+        "z": "63d8d719235423e1",
+        "name": "spacer",
+        "group": "8cdd80f37957781d",
+        "order": 46,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "76bd1750ee702902",
+        "type": "ui_spacer",
+        "z": "63d8d719235423e1",
+        "name": "spacer",
+        "group": "12e900bdc52c63c1",
+        "order": 2,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "20c2d4386d602805",
+        "type": "ui_spacer",
+        "z": "63d8d719235423e1",
+        "name": "spacer",
+        "group": "12e900bdc52c63c1",
+        "order": 6,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "92d7a27fcf47cee5",
+        "type": "ui_spacer",
+        "z": "63d8d719235423e1",
+        "name": "spacer",
+        "group": "12e900bdc52c63c1",
+        "order": 10,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "9dfd676567f33a48",
+        "type": "ui_spacer",
+        "z": "63d8d719235423e1",
+        "name": "spacer",
+        "group": "12e900bdc52c63c1",
+        "order": 14,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "8cdd80f37957781d",
+        "type": "ui_group",
+        "name": "RoboEye",
+        "tab": "90a4daa26e121537",
+        "order": 1,
+        "disp": false,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cf351bfc4055d616",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": ""
+    },
+    {
+        "id": "a66d4c6b.57ddc",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": ""
+    },
+    {
+        "id": "12e900bdc52c63c1",
+        "type": "ui_group",
+        "name": "Config",
+        "tab": "90a4daa26e121537",
+        "order": 2,
+        "disp": true,
+        "width": 7,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "90a4daa26e121537",
+        "type": "ui_tab",
+        "name": "RoboEye",
+        "icon": "dashboard",
+        "order": 9,
+        "disabled": false,
+        "hidden": false
+    }
+]
